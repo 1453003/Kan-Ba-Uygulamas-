@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjeuygulamlarıKulllanıcı.Sayfalar.KullanıcıKayıt"
+             Loaded="ContentPage_Loaded"
+             Title="KullanıcıKayıt">
+    <StackLayout>
+        <Grid   HeightRequest="500" VerticalOptions="Center" WidthRequest="200" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="Auto" />
+                
+            </Grid.ColumnDefinitions>
+            <Entry x:Name="EkullancıAdı" Placeholder="Ad" TextColor="Red" BackgroundColor="White" Grid.Row="1" HeightRequest="50" WidthRequest="200"/>
+            <Entry x:Name="EKullancıSoyadı" Placeholder="Soyad" TextColor="Red" BackgroundColor="White" Grid.Row="2" HeightRequest="50" WidthRequest="200"/>
+            <Entry x:Name="EKullanıcıKanGrubu" Placeholder="Kan Grubu" TextColor="Red" BackgroundColor="White" Grid.Row="3" HeightRequest="50" WidthRequest="200"/>
+            <Entry x:Name="KullanıcıTC" Placeholder="T.C" TextColor="Red" BackgroundColor="White" Grid.Row="4" HeightRequest="50" WidthRequest="200"/>
+            <Entry x:Name="KullanıcıSifre" Placeholder="kullanıcı Sifre" TextColor="Red" BackgroundColor="White" Grid.Row="5" HeightRequest="50" WidthRequest="200" />
+            <DatePicker x:Name="KullanıcıKanVermeTarih" Format="dd MMMM yyyy" TextColor="Red" BackgroundColor="White" Grid.Row="6" HeightRequest="50" WidthRequest="200" />
+            <Button x:Name="KUllanıcıkAYIT" Text=" KAYDET" BackgroundColor="Black" TextColor="Red" Grid.Row="7" Clicked="KUllanıcıkAYIT_Clicked" HeightRequest="50" WidthRequest="200"/>
+        </Grid>
+        
+    </StackLayout>
+</ContentPage>

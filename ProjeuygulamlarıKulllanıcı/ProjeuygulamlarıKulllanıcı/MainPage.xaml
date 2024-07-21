@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjeuygulamlarıKulllanıcı.MainPage"
+             BackgroundColor="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Üst kısım (logo ve giriş formu) -->
+        <StackLayout Grid.Row="0" BackgroundColor="Black" VerticalOptions="CenterAndExpand" Padding="30,0">
+            <Image Source="logoby.png" HorizontalOptions="Center" Margin="0,40,0,20" WidthRequest="50" HeightRequest="50" />
+            <Entry x:Name="TC" Placeholder="T.C." TextColor="White" PlaceholderColor="Gray" BackgroundColor="Black" Margin="0,0,0,10" WidthRequest="400" HeightRequest="50"/>
+            <Entry x:Name="Sifre" Placeholder="Şifre" IsPassword="True" TextColor="White" PlaceholderColor="Gray" BackgroundColor="Black" Margin="0,0,0,10" WidthRequest="400" HeightRequest="50" />
+            <Button x:Name="Giris" Text="GİRİŞ" BackgroundColor="#FF6347" TextColor="White" Margin="0,0,0,20" WidthRequest="300" HeightRequest="50" Clicked="Giris_Clicked"/>
+            <Label Text="Şifremi unuttum?" TextColor="Gray" HorizontalOptions="Center" />
+        </StackLayout>
+
+        <!-- Alt kısım (kaydol kısmı) -->
+        <StackLayout Grid.Row="1" BackgroundColor="Black" VerticalOptions="End" Padding="10,20">
+            <Label x:Name="Hesaboluşturma"  Text="Hesabın yok mu? Kaydol" TextColor="White" HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLabelTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

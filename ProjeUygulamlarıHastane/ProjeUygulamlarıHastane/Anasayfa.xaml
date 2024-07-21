@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjeUygulamlarıHastane.Sayaflar.Anasayfa"
+             Loaded="ContentPage_Loaded"
+             Title="Anasayfa">
+    <StackLayout>
+
+
+        <StackLayout Padding="10">
+            <Grid BackgroundColor="#FF6347">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                
+                <Label x:Name="HastaAdı" Text="HASTA ADI" TextColor="White" BackgroundColor="#FF6347" FontAttributes="Bold" Grid.Row="0" Grid.Column="1" />
+                <Label x:Name="HastaSoyadı" Text="HASTA SOYADI" TextColor="White" BackgroundColor="#FF6347" FontAttributes="Bold" Grid.Row="0" Grid.Column="2" />
+                <Label x:Name="HastaTc" Text="HASTA TC" TextColor="White" BackgroundColor="#FF6347" FontAttributes="Bold" Grid.Row="0" Grid.Column="3" />
+                <Label x:Name="KanGrubu" Text="KAN GRUBU" TextColor="White" BackgroundColor="#FF6347" FontAttributes="Bold" Grid.Row="0" Grid.Column="4" />
+                <Label x:Name="NeKadarKan" Text="Ne Kadar Kan" TextColor="White" BackgroundColor="#FF6347" FontAttributes="Bold" Grid.Row="0" Grid.Column="5" />
+
+
+
+
+
+            </Grid>
+        </StackLayout>
+
+
+
+
+        <CollectionView
+        x:Name="collectionViewHasta">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+
+                        <ScrollView>
+                            <StackLayout Padding="10">
+                                <Grid BackgroundColor="Black">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+
+
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                      
+
+                                    </Grid.ColumnDefinitions>
+
+                                   
+                                    <Label Text="{Binding Ad}" TextColor="White" BackgroundColor="Black" Grid.Row="1" Grid.Column="1" />
+                                    <Label Text="{Binding Soyad}" TextColor="White" BackgroundColor="Black" Grid.Row="1" Grid.Column="2" />
+                                    <Label Text="{Binding TCKimlikNo}" TextColor="White" BackgroundColor="Black" Grid.Row="1" Grid.Column="3" />
+                                    <Label Text="{Binding KanGrubu}" TextColor="White" BackgroundColor="Black" Grid.Row="1" Grid.Column="4" />
+                                    <Label Text="{Binding KacUnite }" TextColor="White" BackgroundColor="Black"  Grid.Row="1" Grid.Column="5"/>
+                                   
+                                </Grid>
+                            </StackLayout>
+
+
+                        </ScrollView>
+                    </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+        <Grid BackgroundColor="Red" VerticalOptions="EndAndExpand" Padding="20" HeightRequest="100" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+               
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"  />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                
+
+
+
+            </Grid.ColumnDefinitions>
+            <Entry  x:Name="EHastaAdı" Placeholder="Hasta Adı" TextColor="Black" BackgroundColor="White" Grid.Column="0"   />
+            <Entry  x:Name="EHastaSoyadı" Placeholder="Hasta Soyadı" TextColor="Black" BackgroundColor="White" Grid.Column="1"    />
+            <Entry  x:Name="EHastaTc" Placeholder="Hasta TC" TextColor="Black" BackgroundColor="White" Grid.Column="2"  />
+            <Entry  x:Name="EKanGrubu" Placeholder="Kan Grubu" TextColor="Black" BackgroundColor="White" Grid.Column="3" />
+            <Entry  x:Name="KaçUnite" Placeholder="KAÇ ÜNİTE " TextColor="Black" BackgroundColor="White" Grid.Column="4"  />
+            <Button x:Name="HastaEKle"  Text="HASTA EKLE" BackgroundColor="Black" TextColor="White" Grid.Column="5" Clicked="HastaEKle_Clicked"   Padding="20"  />
+            <Button x:Name="HastaGetir" Text="HASTA GÖRÜNTÜLE" BackgroundColor="Black" TextColor="White" Grid.Column="6" Clicked="HastaGetir_Clicked"   Padding="20"  />
+            <Button x:Name="HastaGuncelle" Text="HASTA GÜNCELLE" BackgroundColor="Black" TextColor="White" Grid.Column="7" Clicked="HastaGuncelle_Clicked"  Padding="20"  />
+            <Button x:Name="HastaSil" Text="HASTA SİL" BackgroundColor="Black" TextColor="White" Grid.Column="8" Clicked="HastaSil_Clicked"  Padding="20" />
+        </Grid>
+    </StackLayout>
+</ContentPage>

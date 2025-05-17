@@ -53,15 +53,6 @@ Uygulama, tüm veri işlemlerini bir **ASP.NET Core Web API** aracılığıyla g
 
 ---
 
-## 🧮 Veritabanı Yapısı (Özet)
-
-- **Users**
-  - `Id`, `Name`, `BloodType`, `LastDonationDate`, `NextEligibleDate`
-  
-- **Donations**
-  - `Id`, `UserId`, `DonationDate`
-
----
 
 ## 📷 Ekran Görüntüleri
 
@@ -70,23 +61,5 @@ Uygulama, tüm veri işlemlerini bir **ASP.NET Core Web API** aracılığıyla g
 ![resim2](resim2.png)
 
 
-## ⚙️ Kurulum ve Çalıştırma
 
-### Gerekli Araçlar:
-- Visual Studio 2022+
-- .NET 7 SDK
-- SQL Server
 
-### Adımlar:
-
-```bash
-1. Projeyi klonlayın:
-   git clone https://github.com/kullaniciadi/kan-bagisi-uygulamasi.git
-
-2. Veritabanını oluşturun ve bağlantı dizesini güncelleyin.
-
-3. API projesini çalıştırın (ASP.NET Core).
-
-4. MAUI projelerini başlatın:
-   - Hastane paneli için: `HospitalApp`
-   - Kullanıcı paneli için: `UserApp`

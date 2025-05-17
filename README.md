@@ -65,9 +65,10 @@ Uygulama, tüm veri işlemlerini bir **ASP.NET Core Web API** aracılığıyla g
 
 ## 📷 Ekran Görüntüleri
 
-> 📌 Buraya hastane ve kullanıcı arayüzünden alınmış ekran görüntüleri ekleyebilirsiniz.
+> 📌 
+![resim1](resim1.png)
+![resim2](resim2.png)
 
----
 
 ## ⚙️ Kurulum ve Çalıştırma
 
